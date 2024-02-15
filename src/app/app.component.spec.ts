@@ -1,11 +1,19 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {ComponentFixture, fakeAsync, TestBed, tick} from '@angular/core/testing';
+import {ReactiveFormsModule} from '@angular/forms';
+import {AppComponent} from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
       declarations: [AppComponent],
-    }).compileComponents();
+      imports: [ReactiveFormsModule],
+    });
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   });
 
   it('should create the app', () => {
@@ -28,4 +36,19 @@ describe('AppComponent', () => {
       'assesment app is running!'
     );
   });
+
+  it('should initialize the form correctly', () => {
+  });
+
+  it('should validate license plate format', () => {
+  });
+
+  it('should format license plate on value changes', fakeAsync(() => {
+  }));
+
+  it('should submit form on onSubmit()', () => {
+  });
+
+  it('should show error message for invalid license plate', fakeAsync(() => {
+  }));
 });
