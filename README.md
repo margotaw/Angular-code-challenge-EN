@@ -1,3 +1,16 @@
+# Karolina Uskure notes
+This is amount Ive managed to finish in 4 hours.
+From improvements if I had more time:
+1.Im sure the use of Kenteken and its validation and formatting can be dont more elegantly,but it would require a bit more of additional time as I havent worked with it previously.
+2.Currently it does formatting twice on each stroke which is not efficient and that would be one of the improvements I would bring in.
+3.HTML can be deviding putting each dropdown and field into separate component and managing it through Form from AppComponent, but in such a small app it felt as overcomplication.
+4.I didnt have enough time to start with tests,but Ive wrote main satring points that I would test,while there is no connection to the back end.
+5.Vehicle photo moves a bit when allert pops up.That could be fixed by putting size to fixed(currently it takes all the space available with and high vice)
+
+
+
+
+
 # Angular Code Challenge
 
 Great to see that you are interested in working with us! We work with a large group of developers on the websites of Centraal Beheer, Interpolis, FBTO and Avero every day. We would really like to expand this group of developers.
