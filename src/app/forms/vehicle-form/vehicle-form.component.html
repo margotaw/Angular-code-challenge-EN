@@ -1,0 +1,35 @@
+<div class="grid md:grid-cols-2">
+  <form [formGroup]="vehicleForm" (ngSubmit)="onSubmit()" class="p-8">
+    <h2 class="text-xl font-bold text-blue-500">Voertuiginformatie opzoeken</h2>
+    <!-- Main Type -->
+    <label class="block mt-4" for="vehicle-type">
+      <span class="text-gray-700">Van welk type voertuig wilt u voertuiginformatie opzoeken?</span>
+      <select id="vehicle-type" formControlName="vehicleType" (change)="onVehicleChange($event)"
+        class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
+        <option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle}}</option>
+      </select>
+    </label>
+
+    <!-- sub type -->
+
+    <app-vehicle-sub-type *ngIf="vehicleForm.get('vehicleType')?.value !== 'Scooter'" [subtypes]="subtypes"
+      [vehicleForm]="vehicleForm" formControlName="subtype">
+    </app-vehicle-sub-type>
+
+    <!--   license-plate -->
+    <!-- License Plate Section -->
+    <app-license-plate [vehicleForm]="vehicleForm">
+      ></app-license-plate>
+
+    <div class="mt-4">
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit"
+        [disabled]="vehicleForm.invalid">
+        Verzenden
+      </button>
+      Selected values are :  {{vehicleForm.value | json}}
+      <div *ngIf="vehicleForm.invalid" class="text-red-700">Vul alle waardes correct in.</div>
+    </div>
+  </form>
+
+  <app-image-display [image]="vehicleImage"></app-image-display>
+</div>

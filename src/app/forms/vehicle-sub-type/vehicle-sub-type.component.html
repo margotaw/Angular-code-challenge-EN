@@ -1,0 +1,8 @@
+<!-- vehicle-subtype-select.component.html -->
+<label class="block mt-4" for="subtype">
+  <span class="text-gray-700">Welk type [auto/motor/brommer] hebt u?</span>
+  <select id="subtype" (change)="onSubTypeSelection($event)" formControlName="subtype" class="block w-full mt-1">
+    <option value="" disabled>Select a subtype</option>
+    <option *ngFor="let subtype of subtypes" [value]="subtype">{{ subtype }}</option>
+  </select>
+</label>
