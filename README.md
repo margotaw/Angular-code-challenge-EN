@@ -3,8 +3,7 @@ Added accessibility , proper testing is pending
 Split the html into logical Angular components , license place can be reuseable hence added another component
 completed this around 4 hour , added testcases but running in some issue in testing all testcases 
 added formatting and validation for license using rdw-kenteken-check
-
-
+added testcases but setting up karma and testing pending
 
 
 # Angular Code Challenge

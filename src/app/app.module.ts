@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LicensePlateComponent } from './forms/license-plate/license-plate.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'forms', pathMatch: 'full' }, // Redirect to forms
+  { path: '', redirectTo: 'forms/vehicle-form', pathMatch: 'full' }, 
   { path: 'forms', loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule) }, // Lazy load the forms module
 ];
 
