@@ -1,3 +1,11 @@
+#Rachana added notes
+Added accessibility , proper testing is pending
+Split the html into logical Angular components , license place can be reuseable hence added another component
+completed this around 4 hour , added testcases but running in some issue in testing all testcases 
+added formatting and validation for license using rdw-kenteken-check
+added testcases but setting up karma and testing pending
+
+
 # Angular Code Challenge
 
 Great to see that you are interested in working with us! We work with a large group of developers on the websites of Centraal Beheer, Interpolis, FBTO and Avero every day. We would really like to expand this group of developers.
